@@ -1,0 +1,2 @@
+[all]
+web1.aws ansible_ssh_user=ubuntu
