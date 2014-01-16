@@ -15,8 +15,13 @@
   tags:
     - common tools
 
-- name: Install java
+- name: Install jdk
   hosts: all
+  roles:
+    - jdk
+  tags:
+    - jdk
+
 - name: Install GVM (With grails and groovy specific versions)
   hosts: all
 - name: Install Mysql

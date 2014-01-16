@@ -1,0 +1,39 @@
+---
+# This playbook installs JDK from webupd8 repo
+
+- name: Check that OpenJDK isn't installed
+  apt: pkg=openjdk state=absent purge=true
+  sudo: True
+  tags: 
+    - jdk
+
+- name: Add repository key
+  apt_key: data="{{ lookup('file', 'webupd8-key.asc') }}" state=present
+  sudo: True
+  when: ansible_distribution == 'Ubuntu'
+  tags: 
+    - jdk
+    - repository
+
+- name: Add repository
+  apt_repository: repo="deb http://ppa.launchpad.net/webupd8team/java/ubuntu {{ ansible_distribution_release }} main " state=present
+  sudo: True
+  when: ansible_distribution == 'Ubuntu'
+  tags: 
+    - jdk
+    - repository
+
+- name: Accept oracle license before installing jdk in silent mode
+  shell: "echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections"
+  sudo: True
+  tags: 
+    - jdk
+    - repository
+
+- name: Install jdk
+  apt: pkg=oracle-{{ item }}-installer state=latest update_cache=yes
+  with_items: jdk_versions
+  sudo: True
+  tags: 
+    - jdk
+    - repository
