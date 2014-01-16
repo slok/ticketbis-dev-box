@@ -1,0 +1,20 @@
+---
+# This playbook deploys the whole work machine
+
+- name: Apply common configuration 
+  hosts: all
+  roles:
+    - common
+  tags:
+    -configuration
+
+- name: Install common tools
+  hosts: all
+- name: Install java
+  hosts: all
+- name: Install GVM (With grails and groovy specific versions)
+  hosts: all
+- name: Install Mysql
+  hosts: all
+- name: Install Redis
+  hosts: all
