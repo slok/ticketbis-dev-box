@@ -1,0 +1,26 @@
+---
+# This playbook installs commons tools
+
+- name: Update package repos
+  apt: update_cache=yes
+  when: ansible_os_family == "Debian"
+  sudo: True
+  tags: 
+    - apt
+    - common tools
+
+- name: Install SVN
+  apt: pkg=subversion state=latest
+  when: ansible_os_family == "Debian"
+  sudo: True
+  tags: 
+    - svn
+    - common tools
+
+- name: Install Git
+  apt: pkg=git state=latest
+  when: ansible_os_family == "Debian"
+  sudo: True
+  tags: 
+    - git
+    - common tools

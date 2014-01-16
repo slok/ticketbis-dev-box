@@ -10,6 +10,11 @@
 
 - name: Install common tools
   hosts: all
+  roles:
+    - tools
+  tags:
+    - common tools
+
 - name: Install java
   hosts: all
 - name: Install GVM (With grails and groovy specific versions)
