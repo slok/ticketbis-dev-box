@@ -1,2 +1,8 @@
 [all]
-web1.aws ansible_ssh_user=ubuntu
+web1.aws
+
+[aws]
+web1.aws
+
+[aws:vars]
+ansible_ssh_user=ubuntu
