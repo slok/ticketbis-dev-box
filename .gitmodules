@@ -1,0 +1,3 @@
+[submodule "provisioning/work/roles/mysql"]
+	path = provisioning/work/roles/mysql
+	url = https://github.com/bennojoy/mysql
