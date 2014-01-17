@@ -22,9 +22,17 @@
   tags:
     - jdk
 
-- name: Install GVM (With grails and groovy specific versions)
+#- name: Install GVM (With grails and groovy specific versions)
+#  hosts: all
+
+- name: Install Mysql # https://github.com/bennojoy/mysql
   hosts: all
-- name: Install Mysql
-  hosts: all
-- name: Install Redis
-  hosts: all
+  roles:
+    - mysql
+  sudo: True
+  tags:
+    - mysql
+    - database
+
+#- name: Install Redis
+#  hosts: all
