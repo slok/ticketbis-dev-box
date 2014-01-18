@@ -34,5 +34,12 @@
     - mysql
     - database
 
-#- name: Install Redis
-#  hosts: all
+- name: Install Redis # https://github.com/bennojoy/redis
+  hosts: all
+  roles:
+    - redis
+  sudo: True
+  tags:
+    - redis
+    - database
+
