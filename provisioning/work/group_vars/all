@@ -12,8 +12,6 @@ mysql_db:
 # Redis
 redis_max_memory: 1024mb
 
-# Working settings
-working_user: "ubuntu"
 groovy_versions:
   - 2.1.0
   - 2.2.1
