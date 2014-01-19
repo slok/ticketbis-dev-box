@@ -2,28 +2,28 @@
 # This playbook deploys the whole work machine
 
 - name: Apply common configuration 
-  hosts: all
+  hosts: main
   roles:
     - common
   tags:
     -configuration
 
 - name: Install common tools
-  hosts: all
+  hosts: main
   roles:
     - tools
   tags:
     - common tools
 
 - name: Install jdk
-  hosts: all
+  hosts: main
   roles:
     - jdk
   tags:
     - jdk
 
 - name: Install GVM (With grails and groovy specific versions)
-  hosts: all
+  hosts: main
   roles:
     - gvm
   remote_user: "{{ working_user }}"
@@ -32,7 +32,7 @@
     - development
 
 - name: Install Mysql # https://github.com/bennojoy/mysql
-  hosts: all
+  hosts: databases
   roles:
     - mysql
   sudo: True
@@ -41,7 +41,7 @@
     - database
 
 - name: Install Redis # https://github.com/bennojoy/redis
-  hosts: all
+  hosts: databases
   roles:
     - redis
   sudo: True

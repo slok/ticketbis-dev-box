@@ -1,4 +1,7 @@
-[all]
+[main]
+web1.aws
+
+[databases]
 web1.aws
 
 [aws]
