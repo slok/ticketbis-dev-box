@@ -14,3 +14,11 @@ redis_max_memory: 1024mb
 
 # Working settings
 working_user: "ubuntu"
+groovy_versions:
+  - 2.1.0
+  - 2.2.1
+grails_versions:
+  - 2.0.1
+  - 2.1.2
+default_groovy: 2.2.1
+default_grails: 2.0.1

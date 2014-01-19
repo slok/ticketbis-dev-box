@@ -22,8 +22,14 @@
   tags:
     - jdk
 
-#- name: Install GVM (With grails and groovy specific versions)
-#  hosts: all
+- name: Install GVM (With grails and groovy specific versions)
+  hosts: all
+  roles:
+    - gvm
+  remote_user: "{{ working_user }}"
+  tags:
+    - gvm
+    - development
 
 - name: Install Mysql # https://github.com/bennojoy/mysql
   hosts: all
