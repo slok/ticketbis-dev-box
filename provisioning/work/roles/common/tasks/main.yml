@@ -2,7 +2,7 @@
 # This playbook contains common plays that will be run on all nodes.
 
 - name: Setup hosts file
-  copy: src=hosts.cfg dest=/etc/hosts owner=root group=root mode=0644
+  template: src=hosts.j2 dest=/etc/hosts owner=root group=root mode=0644
   sudo: True
   tags: 
     - hosts
