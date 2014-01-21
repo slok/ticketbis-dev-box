@@ -30,12 +30,6 @@ The first thing is to select an IP where we could access to the VM. In this exam
     [vagrant]
     192.168.100.44
 
-### Configure SSH in `~/.ssh/config`
-
-    Host 192.168.100.44
-        StrictHostKeyChecking no
-        UserKnownHostsFile=/dev/null
-
 Run vagrant
 -----------
 
