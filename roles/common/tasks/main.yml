@@ -7,3 +7,8 @@
   tags: 
     - hosts
     - configuration
+
+- name: Check Pycurl is on the machine
+  apt: pkg=python-pycurl
+  when: ansible_os_family == "Debian"
+  sudo: True
