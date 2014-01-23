@@ -1,7 +1,19 @@
 ---
 
+
+# Ticketbis Devel settings ----------------------------------
+
 # TB authorized ssh key
 tb_private_key: ~/.ssh/id_rsa
+
+# Redis tunnel
+tunnel_endpoint: "me-pruebas-backend002.aws.evandti.com"
+tunnel_endpoint_user: "ubuntu"
+tunnel_local_port: 6377
+tunnel_endpoint_port: 6379
+
+
+# Ticketbis Dev box settings --------------------------------
 
 # Mysql
 mysql_port: 3306

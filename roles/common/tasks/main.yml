@@ -18,3 +18,9 @@
   tags:
     - id_rsa
     - ssh
+
+- name: Install Redis tunneling scripts
+  template: src=tunnel.sh dest=~/tunnel.sh mode=0744
+  tags:
+    - script
+    - tunnel
