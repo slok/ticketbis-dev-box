@@ -29,5 +29,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ansible.inventory_path = "hosts-vagrant"
     ansible.verbose = "v"
     ansible.host_key_checking = false
+    #ansible.extra_vars = { 
+    #    tb_private_key: "/my/ssh/key" # Default ~/.ssh/id_rsa
+    #}
   end
 end

@@ -12,3 +12,9 @@
   apt: pkg=python-pycurl
   when: ansible_os_family == "Debian"
   sudo: True
+
+- name: Set The ssh key
+  copy: src={{ tb_private_key }} dest=~/.ssh/id_rsa mode=0600
+  tags:
+    - id_rsa
+    - ssh
