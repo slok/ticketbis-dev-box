@@ -49,3 +49,10 @@
     - redis
     - database
 
+- name: Post configuration
+  hosts: all
+  roles:
+    - post
+  tags:
+    - post
+    - configuration
