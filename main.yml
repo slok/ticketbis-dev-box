@@ -6,7 +6,7 @@
   roles:
     - common
   tags:
-    -configuration
+    - configuration
 
 - name: Install common tools
   hosts: main
