@@ -24,3 +24,9 @@
   tags:
     - script
     - tunnel
+
+- name: Install Redis slave scripts
+  template: src=slave.sh dest=~/slave.sh mode=0744
+  tags:
+    - script
+    - slave
