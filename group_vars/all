@@ -25,7 +25,7 @@ mysql_db:
 
 
 # Redis
-redis_max_memory: 1024mb
+redis_max_memory: 2048mb
 
 groovy_versions:
   - 2.1.0

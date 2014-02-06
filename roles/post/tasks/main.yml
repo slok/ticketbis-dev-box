@@ -20,3 +20,15 @@
 
   tags: 
     - redis
+    - config
+
+- name: Add redis config for slave
+  lineinfile:
+    dest=/etc/redis/redis.conf
+    line='slave-read-only no'
+    state=present
+  sudo: True
+
+  tags: 
+    - redis
+    - configuration
