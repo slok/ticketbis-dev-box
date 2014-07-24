@@ -1,6 +1,0 @@
-[submodule "provisioning/work/roles/mysql"]
-	path = roles/mysql
-	url = https://github.com/bennojoy/mysql
-[submodule "provisioning/work/roles/redis"]
-	path = roles/redis
-	url = https://github.com/bennojoy/redis
