@@ -13,6 +13,7 @@ Run
 ---
 
 Enter in this repo and:
+
     vagrant up --no-parallel
     vagrant ssh devbox
 
