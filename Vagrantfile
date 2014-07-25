@@ -3,7 +3,7 @@
 
 ######################### EDIT AFTER THIS LINE #################################
 projects_folder = "/home/slok/projects"
-
+devbox_version = 1.2
 ###################### DO NOT EDIT AFTER THIS LINE #############################
 
 VAGRANTFILE_API_VERSION = "2"
@@ -39,7 +39,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "devbox" do |v|
     v.vm.provider "docker" do |d|
       d.name = "devbox"
-      d.image = "slok/tbdevbox:1.1"
+      d.image = "slok/tbdevbox:#{devbox_version}"
       d.has_ssh = true
       d.link("devbox-mysql:db")
       d.ports = ["8080:8080", "8443:8443"]
